@@ -15,9 +15,9 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  line-height: 22px;
+  font-family: $ff-montserrat;
+  color: $color-elephant;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  min-width: $vp-320;
   width: 100%;
   height: 100%;
 
