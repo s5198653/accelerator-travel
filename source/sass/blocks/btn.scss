@@ -1,26 +1,37 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 20px;
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-navy-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--transparent {
+    background-color: $color-transparent;
+    padding: 14px 20px;
   }
 
-  &:disabled {
-    opacity: 0.5;
-
+  &:disabled,
+  &--disabled {
+    background-color: $color-nobel;
     pointer-events: none;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    color: $color-resolution-blue;
+    background-color: $color-default-white;
+    border: 1px solid $color-resolution-blue;
+    margin: -1px;
+  }
+
+  @include active {
+    color: $color-default-white;
+    background-color: $color-resolution-blue;
+    border: unset;
+    margin: 0;
   }
 }
