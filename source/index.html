@@ -22,53 +22,78 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
-    </header>
+    <div class="hero">
+      <div class="hero__image">
+        <picture>
+          <source media="(max-width: 767px)" type="image/webp"
+            srcset="img/hero-mobile@1x.webp 1x, img/hero-mobile@2x.webp 2x">
+          <source media="(max-width: 1023px)" type="image/webp"
+            srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
+          <source media="(max-width: 1199px)" type="image/webp"
+            srcset="img/hero-tablet-wide@1x.webp 1x, img/hero-tablet-wide@2x.webp 2x">
+          <source type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
+          <source media="(max-width: 767px)" type="image/jpg"
+            srcset="img/hero-mobile@1x.jpg 1x, img/hero-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" type="image/jpg"
+            srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
+          <source media="(max-width: 1199px)" type="image/jpg"
+            srcset="img/hero-tablet-wide@1x.jpg 1x, img/hero-tablet-wide@2x.jpg 2x">
+          <img src="img/hero-desktop@1x.jpg" srcset="img/hero-desktop@2x.jpg" alt="" width="1440" height="800">
+        </picture>
+      </div>
+      <header class="hero__header header" data-header>
+        <div class="header__container container">
+          <button class="header__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"
+            data-burger>
+            <span class="header__burger-icon">
+              <svg width="26" height="26">
+                <use href="img/sprite.svg#menu"></use>
+              </svg>
+            </span>
+            <svg class="header__burger-icon-close" width="26" height="26" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <a class="header__logo logo" href="#">
+            <svg width="205" height="62">
+              <use href="img/sprite.svg#logotype"></use>
+            </svg>
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#tours">Туры</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#education">Обучение</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#about">О нас</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#photo">Фотографии</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__phone" href="tel:+78007253232">8 800 725-32-32</a>
+        </div>
+      </header>
+    </div>
     <main>
       <section class="intro">
         <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
         </div>
       </section>
     </main>
     <footer>
       <div class="container"></div>
     </footer>
-  </div>
-
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>
