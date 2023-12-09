@@ -1,18 +1,22 @@
 .header {
-  padding: 0 120px;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
   color: $color-default-white;
   z-index: 30;
   transition: transform 0.3s ease, background-color 0.3s ease;
 
-  &--sticky {
+  &--overlay.is-open {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(45, 56, 63, 0.6);
   }
 
-  @include vp-1199 {
-    padding: 0;
+  @include vp-1239 {
+    background-color: $color-navy-blue;
   }
 }
 
@@ -24,8 +28,8 @@
   color: $color-default-white;
   background-color: $color-navy-blue;
 
-  @include vp-1199 {
-    padding: 20px 45px;
+  @include vp-1239 {
+    padding: 20px 0;
   }
 
   @include vp-767 {
@@ -33,7 +37,7 @@
     grid-template-columns: 1fr 142px;
     gap: 14px;
     align-items: start;
-    padding: 15px;
+    padding: 15px 0;
   }
 }
 
@@ -41,19 +45,15 @@
   display: flex;
   align-items: center;
   color: $color-default-white;
+  padding: 30px 10px;
 
-  @include vp-1199 {
+  @include vp-1239 {
+    padding: 0;
+
     .is-open & {
       color: $color-elephant;
       z-index: 25;
     }
-  }
-}
-
-.header__logo svg {
-  @include vp-1199 {
-    width: 142px;
-    height: 42px;
   }
 }
 
@@ -79,10 +79,11 @@
     pointer-events: none;
   }
 
-  @include vp-1199 {
+  @include vp-1239 {
     max-width: 130px;
     font-size: 16px;
     line-height: 16px;
+    text-align: end;
 
     .is-open & {
       color: $color-elephant;
@@ -103,6 +104,8 @@
   @include vp-767 {
     grid-column: 2/-1;
     margin-left: auto;
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 
@@ -142,7 +145,7 @@
       transform: translateX(0);
     }
 
-    @include vp-1199 {
+    @include vp-1239 {
       .header__nav-link {
         color: $color-elephant;
         text-transform: uppercase;
