@@ -4,6 +4,8 @@ import './modules/burger-menu/locomotive-scroll';
 import {Burger} from './modules/burger-menu/burger';
 import {StickyHeader} from './modules/burger-menu/sticky-header';
 import {initLocomotiveScroll} from './modules/burger-menu/init-locomotive-scroll';
+import {runVideo} from './modules/run-video';
+import {initHeroSwiper} from './modules/hero-swiper';
 
 // ---------------------------------
 
@@ -20,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    runVideo();
+    initHeroSwiper();
   });
 });
 

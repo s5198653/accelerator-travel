@@ -2,6 +2,10 @@
   display: inline-flex;
   padding: 20px;
 
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
   color: $color-default-white;
 
   background-color: $color-navy-blue;
@@ -13,6 +17,7 @@
   &--transparent {
     background-color: $color-transparent;
     padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   &:disabled,
