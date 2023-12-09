@@ -39,8 +39,16 @@ const refresh = (done) => {
   done();
 };
 
+const cleanToTest = () => del("../lifetour-self-test/build", { force: true });
+
+const copyToTest = () =>
+  gulp
+    .src("build/**", { base: "build" })
+    .pipe(gulp.dest("../lifetour-self-test/build"));
+
 const build = gulp.series(clean, copy, sprite, gulp.parallel(compileMinStyles, compileMainMinScripts, compileVendorScripts, optimizePng, optimizeJpg, optimizeSvg));
 const dev = gulp.series(clean, copy, sprite, gulp.parallel(compileMinStyles, compileMainMinScripts, compileVendorScripts, optimizePng, optimizeJpg, optimizeSvg), syncServer);
-const start = gulp.series(clean, copy, sprite, gulp.parallel(compileStyles, compileMainScripts, compileVendorScripts), syncServer);
+const start = gulp.series(clean, copy, sprite, gulp.parallel(compileStyles, compileMainScripts, compileVendorScripts), cleanToTest,
+copyToTest, syncServer);
 
 export { createWebp as webp, build, start, dev};
