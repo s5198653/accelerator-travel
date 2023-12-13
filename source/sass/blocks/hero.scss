@@ -16,12 +16,7 @@
   display: flex;
   flex-direction: column;
 
-  @include vp-1439 {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  @include vp-1239 {
+  @include vp-1199 {
     align-items: center;
     min-height: 1024px;
     text-align: center;
@@ -42,10 +37,10 @@
   line-height: 77px;
   color: $color-default-white;
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
   z-index: 1;
 
-  @include vp-1239 {
+  @include vp-1199 {
     font-size: 56px;
     line-height: 56px;
     padding-bottom: 15px;
@@ -66,9 +61,9 @@
   line-height: 24px;
   color: $color-default-white;
   margin: 0;
-  padding-bottom: 35px;
+  padding-bottom: 37px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     max-width: 500px;
     padding-bottom: 25px;
   }
@@ -86,7 +81,7 @@
   justify-content: center;
   margin-bottom: 20px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     margin-bottom: 45px;
   }
 }
@@ -96,7 +91,7 @@
   gap: 10px;
   margin-top: auto;
 
-  @include vp-1239 {
+  @include vp-1199 {
     display: none;
   }
 }
@@ -136,7 +131,7 @@
   top: 329px;
   right: 120px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     position: relative;
     top: unset;
     right: unset;
@@ -152,7 +147,7 @@
   width: 482px;
   height: 317px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     width: 442px;
     height: 300px;
   }
@@ -213,7 +208,7 @@
   width: 410px;
   height: 459px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     width: 442px;
     height: 365px;
   }
@@ -224,7 +219,7 @@
   top: 187px;
   right: 120px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     position: relative;
     top: unset;
     right: unset;
@@ -243,7 +238,7 @@
   right: 120px;
   background-color: $color-transparent;
 
-  @include vp-1239 {
+  @include vp-1199 {
     position: relative;
     top: unset;
     right: unset;
@@ -269,7 +264,7 @@
   justify-content: end;
   padding-right: 116px;
 
-  @include vp-1239 {
+  @include vp-1199 {
     justify-content: center;
     bottom: 40px;
     padding-right: 0;
