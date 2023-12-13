@@ -15,7 +15,7 @@
     background-color: rgba(45, 56, 63, 0.6);
   }
 
-  @include vp-1239 {
+  @include vp-1199 {
     background-color: $color-navy-blue;
   }
 }
@@ -28,7 +28,7 @@
   color: $color-default-white;
   background-color: $color-navy-blue;
 
-  @include vp-1239 {
+  @include vp-1199 {
     padding: 20px 0;
   }
 
@@ -37,18 +37,21 @@
     grid-template-columns: 1fr 142px;
     gap: 14px;
     align-items: start;
-    padding: 15px 0;
+    padding: 15px 0 13px;
   }
 }
 
 .header__logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: $color-default-white;
-  padding: 30px 10px;
+  width: 205px;
 
-  @include vp-1239 {
-    padding: 0;
+  @include vp-1199 {
+    justify-content: flex-start;
+    width: 142px;
+    padding-left: 0;
 
     .is-open & {
       color: $color-elephant;
@@ -58,7 +61,7 @@
 }
 
 .header__phone {
-  width: 150px;
+  max-width: 160px;
   z-index: 20;
   font-size: 18px;
   font-style: normal;
@@ -79,7 +82,7 @@
     pointer-events: none;
   }
 
-  @include vp-1239 {
+  @include vp-1199 {
     max-width: 130px;
     font-size: 16px;
     line-height: 16px;
@@ -106,12 +109,13 @@
     margin-left: auto;
     font-size: 14px;
     line-height: 14px;
+    padding-top: 2px;
   }
 }
 
 .header__nav {
-  max-width: 650px;
-  padding: 0 10px;
+  max-width: 670px;
+  padding: 23px 30px;
 
   @media (max-width: 1199px) {
     max-width: unset;
@@ -145,7 +149,7 @@
       transform: translateX(0);
     }
 
-    @include vp-1239 {
+    @include vp-1199 {
       .header__nav-link {
         color: $color-elephant;
         text-transform: uppercase;
@@ -159,7 +163,7 @@
 .header__nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
 
   list-style: none;
   margin: 0;
@@ -191,7 +195,7 @@
 }
 
 .header__nav-link {
-  padding: 3px 5px;
+  padding: 3px 8px;
   color: $color-default-white;
 
   @include hover {
@@ -247,7 +251,7 @@
 
 .header__burger-icon {
   font-size: 18px;
-  font-family: "Neue Machina", "Arial", sans-serif;
+  font-family: 'Neue Machina', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1;
   transition: opacity 0.3s ease 0.1s;
