@@ -1,0 +1,28 @@
+.title__wrapper {
+  position: relative;
+}
+
+.title {
+  position: relative;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.title__shadow {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 55px;
+  color: rgba(45, 56, 63, 0.03);
+  margin: 0;
+}
