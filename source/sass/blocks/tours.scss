@@ -14,7 +14,6 @@
   height: 1630px;
 
   @include vp-1199 {
-    width: 602px;
     height: 1364px;
   }
 
@@ -56,8 +55,7 @@
 }
 
 .tours__title {
-  max-width: 540px;
-  margin: 0;
+  max-width: 550px;
 }
 
 .tours__swiper {
@@ -219,6 +217,10 @@
     color: $color-default-white;
     background-color: $color-resolution-blue;
     border: 1px solid $color-resolution-blue;
+  }
+
+  @include vp-767 {
+    top: 30px;
   }
 }
 
