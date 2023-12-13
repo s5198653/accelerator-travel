@@ -1,254 +1,1131 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Организация походов в горы" />
+    <title>Lifetour</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-icon-180x180.png"
+      type="image/png"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Организация походов в горы">
-  <title>Lifetour</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png" type="image/png">
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-300.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-500.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-600.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-700.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/montserrat-v26-cyrillic_latin-800.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-300.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-500.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-600.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-800.woff2" as="font" crossorigin="anonymous">
-
-</head>
-
-<body>
-  <div class="wrapper">
-    <div data-test=”hero”>
-      <header class="header header--overlay" data-header>
-        <div class="container">
-          <div class="header__container">
-            <button class="header__burger" type="button" aria-label="Переключатель отображения меню"
-              aria-pressed="false" data-burger>
-              <span class="header__burger-icon">
-                <svg width="26" height="26">
-                  <use href="img/sprite.svg#menu"></use>
+  <body>
+    <div class="wrapper">
+      <div data-test="hero">
+        <header class="header header--overlay" data-header>
+          <div class="container">
+            <div class="header__container">
+              <button
+                class="header__burger"
+                type="button"
+                aria-label="Переключатель отображения меню"
+                aria-pressed="false"
+                data-burger
+              >
+                <span class="header__burger-icon">
+                  <svg width="26" height="26">
+                    <use href="img/sprite.svg#menu"></use>
+                  </svg>
+                </span>
+                <svg
+                  class="header__burger-icon-close"
+                  width="26"
+                  height="26"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="img/sprite.svg#icon-close"></use>
                 </svg>
-              </span>
-              <svg class="header__burger-icon-close" width="26" height="26" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-close"></use>
-              </svg>
-            </button>
-            <a class="header__logo logo" href="#">
-              <svg width="142" height="42">
-                <use href="img/sprite.svg#logotype"></use>
+              </button>
+              <a class="header__logo logo" href="#">
+                <svg width="142" height="42">
+                  <use href="img/sprite.svg#logotype"></use>
+                </svg>
+              </a>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#tours">Туры</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#training">Обучение</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#about">О нас</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#reviews">Отзывы</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#gallery">Фотографии</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <a class="header__phone" href="tel:+78007253232"
+                >8 800 725-32-32</a
+              >
+            </div>
+          </div>
+        </header>
+
+        <section class="hero">
+          <h1 class="visually-hidden">Организация походов в горы</h1>
+          <div class="hero__swiper swiper" data-swiper="hero-swiper">
+            <div class="hero__swiper-wrapper swiper-wrapper">
+              <!-- Slides -->
+              <div
+                class="hero__swiper-slide swiper-slide"
+                role="group"
+                aria-label="1/3"
+              >
+                <div class="hero__slide">
+                  <div class="hero__slide-content">
+                    <h2>Захватывающие вершины Кавказа</h2>
+                    <p>
+                      В сопровождении опытных гидов вы пройдёте
+                      через&nbsp;потрясающие ландшафты и совершите восход
+                      на&nbsp;вершину горы Чегет.
+                    </p>
+                    <a class="hero__btn btn" href="#">Смотреть тур</a>
+                    <div class="hero__level">
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#moon"></use>
+                        </svg>
+                        6 дней/5 ночей
+                      </span>
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#level"></use>
+                        </svg>
+                        Высокая сложность
+                      </span>
+                    </div>
+                    <div class="hero__video" data-tabs="video-container">
+                      <picture data-tabs="video-poster">
+                        <source
+                          media="(max-width: 1239px)"
+                          type="image/webp"
+                          srcset="
+                            img/hero/video-tablet@1x.webp 1x,
+                            img/hero/video-tablet@2x.webp 2x
+                          "
+                        />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/hero/video-desktop@1x.webp 1x,
+                            img/hero/video-desktop@2x.webp 2x
+                          "
+                        />
+                        <source
+                          media="(max-width: 1239px)"
+                          type="image/jpg"
+                          srcset="
+                            img/hero/video-tablet@1x.jpg 1x,
+                            img/hero/video-tablet@2x.jpg 2x
+                          "
+                        />
+                        <img
+                          src="img/hero/video-desktop@1x.jpg"
+                          srcset="img/hero/video-desktop@2x.jpg"
+                          alt=""
+                          width="482"
+                          height="317"
+                        />
+                      </picture>
+                      <button
+                        class="hero__video-button"
+                        type="button"
+                        aria-label="Воспроизвести."
+                        data-tabs="video-button"
+                      >
+                        <svg width="12" height="22">
+                          <use href="img/sprite.svg#arrow-video"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="hero__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-1-mobile@1x.webp 1x,
+                          img/hero/hero-1-mobile@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-1-tablet@1x.webp 1x,
+                          img/hero/hero-1-tablet@2x.webp 2x
+                        "
+                      />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-1-desktop@1x.webp 1x,
+                          img/hero/hero-1-desktop@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-1-mobile@1x.jpg 1x,
+                          img/hero/hero-1-mobile@2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-1-tablet@1x.jpg 1x,
+                          img/hero/hero-1-tablet@2x.jpg 2x
+                        "
+                      />
+                      <img
+                        src="img/hero/hero-1-desktop@1x.jpg"
+                        srcset="img/hero/hero-1-desktop@2x.jpg"
+                        alt=""
+                        width="1440"
+                        height="800"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hero__swiper-slide swiper-slide"
+                role="group"
+                aria-label="2/3"
+              >
+                <div class="hero__slide">
+                  <div class="hero__slide-content">
+                    <h2>Невероятная природа Камчатки</h2>
+                    <p>
+                      Незабываемое приключение, во время которого вы отправитесь
+                      в путешествие по одному из самых нетронутых уголков дикой
+                      природы в мире.
+                    </p>
+                    <a class="hero__btn btn" href="#">Смотреть тур</a>
+                    <div class="hero__level">
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#moon"></use>
+                        </svg>
+                        9 дней/10 ночей
+                      </span>
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#level"></use>
+                        </svg>
+                        Средняя сложность
+                      </span>
+                    </div>
+                    <div class="hero__cards">
+                      <picture>
+                        <source
+                          media="(max-width: 1239px)"
+                          type="image/webp"
+                          srcset="
+                            img/hero/photo-cards-tablet@1x.webp 1x,
+                            img/hero/photo-cards-tablet@2x.webp 2x
+                          "
+                        />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/hero/photo-cards-desktop@1x.webp 1x,
+                            img/hero/photo-cards-desktop@2x.webp 2x
+                          "
+                        />
+                        <source
+                          media="(max-width: 1239px)"
+                          type="image/jpg"
+                          srcset="
+                            img/hero/photo-cards-tablet@1x.jpg 1x,
+                            img/hero/photo-cards-tablet@2x.jpg 2x
+                          "
+                        />
+                        <img
+                          src="img/hero/photo-cards-desktop@1x.jpg"
+                          srcset="img/hero/photo-cards-desktop@2x.jpg"
+                          alt=""
+                          width="410"
+                          height="459"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="hero__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-2-mobile@1x.webp 1x,
+                          img/hero/hero-2-mobile@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-2-tablet@1x.webp 1x,
+                          img/hero/hero-2-tablet@2x.webp 2x
+                        "
+                      />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-1-desktop@1x.webp 1x,
+                          img/hero/hero-1-desktop@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-2-mobile@1x.jpg 1x,
+                          img/hero/hero-2-mobile@2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-2-tablet@1x.jpg 1x,
+                          img/hero/hero-2-tablet@2x.jpg 2x
+                        "
+                      />
+                      <img
+                        src="img/hero/hero-2-desktop@1x.jpg"
+                        srcset="img/hero/hero-2-desktop@2x.jpg"
+                        alt=""
+                        width="1440"
+                        height="800"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hero__swiper-slide swiper-slide"
+                role="group"
+                aria-label="3/3"
+              >
+                <div class="hero__slide">
+                  <div class="hero__slide-content">
+                    <h2>Магические пейзажи Алтайского Края</h2>
+                    <p>
+                      Алтайский трекинг-тур — это захватывающее приключение с
+                      посещением магических и захватывающих дух ландшафтов
+                      Алтайских гор.
+                    </p>
+                    <a class="hero__btn btn" href="#">Смотреть тур</a>
+                    <div class="hero__level">
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#moon"></use>
+                        </svg>
+                        8 дней/7 ночей
+                      </span>
+                      <span>
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#level"></use>
+                        </svg>
+                        Лёгкая сложность
+                      </span>
+                    </div>
+                    <div class="hero__music">
+                      <iframe
+                        style="border: none; width: 340px; height: 220px"
+                        width="340"
+                        height="220"
+                        src="https://music.yandex.ru/iframe/track/112912322/25474374"
+                      ></iframe>
+                    </div>
+                  </div>
+                  <div class="hero__slide-image">
+                    <picture>
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-2-mobile@1x.webp 1x,
+                          img/hero/hero-2-mobile@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-2-tablet@1x.webp 1x,
+                          img/hero/hero-2-tablet@2x.webp 2x
+                        "
+                      />
+                      <source
+                        type="image/webp"
+                        srcset="
+                          img/hero/hero-1-desktop@1x.webp 1x,
+                          img/hero/hero-1-desktop@2x.webp 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-2-mobile@1x.jpg 1x,
+                          img/hero/hero-2-mobile@2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 1199px)"
+                        type="image/jpg"
+                        srcset="
+                          img/hero/hero-2-tablet@1x.jpg 1x,
+                          img/hero/hero-2-tablet@2x.jpg 2x
+                        "
+                      />
+                      <img
+                        src="img/hero/hero-2-desktop@1x.jpg"
+                        srcset="img/hero/hero-2-desktop@2x.jpg"
+                        alt=""
+                        width="1440"
+                        height="800"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="hero__swiper-pagination swiper-pagination swiper-pagination-bullets"
+            ></div>
+          </div>
+        </section>
+      </div>
+      <main>
+        <section class="tours" id="tours" data-test="tours">
+          <div class="tours__container container">
+            <div class="tours__swiper-wrapper">
+              <h2 class="tours__title title">Ближайшие туры</h2>
+              <div
+                class="tours__nav-button tours__nav-button--prev swiper-button-prev"
+                data-button="tours-prev"
+              >
+                <svg width="14" height="9">
+                  <use href="img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+              <div
+                class="tours__nav-button tours__nav-button--next swiper-button-next"
+                data-button="tours-next"
+              >
+                <svg width="14" height="9">
+                  <use href="img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+              <div class="tours__swiper swiper" data-swiper="tours-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="1/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Кавказ
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            4 дня
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            3 ночи
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Путешествие вокруг Эльбруса
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>12.06–19.06</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 15 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.webp 1x,
+                              img/tours/tours-1-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.webp 1x,
+                              img/tours/tours-1-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-desktop@1x.webp 1x,
+                              img/tours/tours-1-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.jpg 1x,
+                              img/tours/tours-1-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.jpg 1x,
+                              img/tours/tours-1-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-1-desktop@1x.jpg"
+                            srcset="img/tours/tours-1-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="2/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Алтай
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            14 дней
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            13 ночей
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Путь к подножию Белухи
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars-3"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>14.06–23.06</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 25 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-mobile@1x.webp 1x,
+                              img/tours/tours-2-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-tablet@1x.webp 1x,
+                              img/tours/tours-2-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-desktop@1x.webp 1x,
+                              img/tours/tours-2-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-2-mobile@1x.jpg 1x,
+                              img/tours/tours-2-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-2-tablet@1x.jpg 1x,
+                              img/tours/tours-2-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-2-desktop@1x.jpg"
+                            srcset="img/tours/tours-2-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="3/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Адыгея
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            7 дней
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            6 ночей
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Через Фишт к&nbsp;Чёрному морю и обратно
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>15.07–19.07</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 22 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.webp 1x,
+                              img/tours/tours-1-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.webp 1x,
+                              img/tours/tours-1-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-desktop@1x.webp 1x,
+                              img/tours/tours-1-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.jpg 1x,
+                              img/tours/tours-1-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.jpg 1x,
+                              img/tours/tours-1-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-1-desktop@1x.jpg"
+                            srcset="img/tours/tours-1-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="4/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Кавказ
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            4 дня
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            3 ночи
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Путешествие вокруг Эльбруса
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>12.06–19.06</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 15 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.webp 1x,
+                              img/tours/tours-1-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.webp 1x,
+                              img/tours/tours-1-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-desktop@1x.webp 1x,
+                              img/tours/tours-1-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.jpg 1x,
+                              img/tours/tours-1-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.jpg 1x,
+                              img/tours/tours-1-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-1-desktop@1x.jpg"
+                            srcset="img/tours/tours-1-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="5/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Алтай
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            14 дней
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            13 ночей
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Путь к подножию Белухи
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars-3"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>14.06–23.06</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 25 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-mobile@1x.webp 1x,
+                              img/tours/tours-2-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-tablet@1x.webp 1x,
+                              img/tours/tours-2-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-2-desktop@1x.webp 1x,
+                              img/tours/tours-2-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-2-mobile@1x.jpg 1x,
+                              img/tours/tours-2-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-2-tablet@1x.jpg 1x,
+                              img/tours/tours-2-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-2-desktop@1x.jpg"
+                            srcset="img/tours/tours-2-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tours__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="6/6"
+                  >
+                    <div class="tours__slide">
+                      <div class="tours__slide-content">
+                        <div class="tours__info-wrapper">
+                          <span class="tours__info tours__info--place">
+                            <svg width="16" height="16">
+                              <use href="img/sprite.svg#geo"></use>
+                            </svg>
+                            Адыгея
+                          </span>
+                          <span class="tours__info tours__info--days">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#sun"></use>
+                            </svg>
+                            7 дней
+                          </span>
+                          <span class="tours__info">
+                            <svg width="20" height="20">
+                              <use href="img/sprite.svg#moon"></use>
+                            </svg>
+                            6 ночей
+                          </span>
+                        </div>
+                        <h3 class="tours__slide-title">
+                          Через Фишт к Чёрному морю и обратно
+                        </h3>
+                        <ul class="tours__details">
+                          <li class="tours__details-item">
+                            <span>Сложность:</span>
+                            <span>
+                              <svg width="84" height="16">
+                                <use href="img/sprite.svg#stars"></use>
+                              </svg>
+                            </span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Даты набора:</span>
+                            <span>15.07–19.07</span>
+                          </li>
+                          <li class="tours__details-item">
+                            <span>Группа:</span>
+                            <span>до 22 чел.</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tours__slide-image">
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.webp 1x,
+                              img/tours/tours-1-mobile@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.webp 1x,
+                              img/tours/tours-1-tablet@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            srcset="
+                              img/tours/tours-1-desktop@1x.webp 1x,
+                              img/tours/tours-1-desktop@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-mobile@1x.jpg 1x,
+                              img/tours/tours-1-mobile@2x.jpg 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 1199px)"
+                            type="image/jpg"
+                            srcset="
+                              img/tours/tours-1-tablet@1x.jpg 1x,
+                              img/tours/tours-1-tablet@2x.jpg 2x
+                            "
+                          />
+                          <img
+                            src="img/tours/tours-1-desktop@1x.jpg"
+                            srcset="img/tours/tours-1-desktop@2x.jpg"
+                            alt=""
+                            width="380"
+                            height="416"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="tours__all"
+              >Показать все туры
+              <svg width="9" height="14">
+                <use href="img/sprite.svg#arrow-small"></use>
               </svg>
             </a>
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#tours">Туры</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#education">Обучение</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#about">О нас</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#reviews">Отзывы</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#photo">Фотографии</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <a class="header__phone" href="tel:+78007253232">8 800 725-32-32</a>
           </div>
-        </div>
-      </header>
-
-      <section class="hero">
-        <h1 class="visually-hidden">Организация походов в горы</h1>
-        <div class="hero__swiper swiper" data-swiper="hero-swiper">
-          <div class="hero__swiper-wrapper swiper-wrapper">
-            <!-- Slides -->
-            <div class="hero__swiper-slide swiper-slide" role="group" aria-label="1/3">
-              <div class="hero__slide">
-                <div class="hero__slide-content">
-                  <h2>Захватывающие вершины Кавказа</h2>
-                  <p>В сопровождении опытных гидов вы пройдёте через&nbsp;потрясающие ландшафты и совершите восход
-                    на&nbsp;вершину горы Чегет.</p>
-                  <a class="hero__btn btn" href="#">Смотреть тур</a>
-                  <div class="hero__level">
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#moon"></use>
-                      </svg>
-                      6 дней/5 ночей
-                    </span>
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#level"></use>
-                      </svg>
-                      Высокая сложность
-                    </span>
-                  </div>
-                  <div class="hero__video" data-tabs="video-container">
-                    <picture data-tabs="video-poster">
-                      <source media="(max-width: 1239px)" type="image/webp"
-                        srcset="img/hero/video-tablet@1x.webp 1x, img/hero/video-tablet@2x.webp 2x">
-                      <source type="image/webp"
-                        srcset="img/hero/video-desktop@1x.webp 1x, img/hero/video-desktop@2x.webp 2x">
-                      <source media="(max-width: 1239px)" type="image/jpg"
-                        srcset="img/hero/video-tablet@1x.jpg 1x, img/hero/video-tablet@2x.jpg 2x">
-                      <img src="img/hero/video-desktop@1x.jpg" srcset="img/hero/video-desktop@2x.jpg" alt="" width="482"
-                        height="317">
-                    </picture>
-                    <button class="hero__video-button" type="button" aria-label="Воспроизвести."
-                      data-tabs="video-button">
-                      <svg width="12" height="22">
-                        <use href="img/sprite.svg#arrow"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="hero__slide-image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp"
-                      srcset="img/hero/hero-1-mobile@1x.webp 1x, img/hero/hero-1-mobile@2x.webp 2x">
-                    <source media="(max-width: 1199px)" type="image/webp"
-                      srcset="img/hero/hero-1-tablet@1x.webp 1x, img/hero/hero-1-tablet@2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/hero/hero-1-desktop@1x.webp 1x, img/hero/hero-1-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" type="image/jpg"
-                      srcset="img/hero/hero-1-mobile@1x.jpg 1x, img/hero/hero-1-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/jpg"
-                      srcset="img/hero/hero-1-tablet@1x.jpg 1x, img/hero/hero-1-tablet@2x.jpg 2x">
-                    <img src="img/hero/hero-1-desktop@1x.jpg" srcset="img/hero/hero-1-desktop@2x.jpg" alt=""
-                      width="1440" height="800">
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="hero__swiper-slide swiper-slide" role="group" aria-label="2/3">
-              <div class="hero__slide">
-                <div class="hero__slide-content ">
-                  <h2>Невероятная природа Камчатки</h2>
-                  <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых
-                    нетронутых уголков дикой природы в мире.</p>
-                  <a class="hero__btn btn" href="#">Смотреть тур</a>
-                  <div class="hero__level">
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#moon"></use>
-                      </svg>
-                      9 дней/10 ночей
-                    </span>
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#level"></use>
-                      </svg>
-                      Средняя сложность
-                    </span>
-                  </div>
-                  <div class="hero__cards">
-                    <picture>
-                      <source media="(max-width: 1239px)" type="image/webp"
-                        srcset="img/hero/photo-cards-tablet@1x.webp 1x, img/hero/photo-cards-tablet@2x.webp 2x">
-                      <source type="image/webp"
-                        srcset="img/hero/photo-cards-desktop@1x.webp 1x, img/hero/photo-cards-desktop@2x.webp 2x">
-                      <source media="(max-width: 1239px)" type="image/jpg"
-                        srcset="img/hero/photo-cards-tablet@1x.jpg 1x, img/hero/photo-cards-tablet@2x.jpg 2x">
-                      <img src="img/hero/photo-cards-desktop@1x.jpg" srcset="img/hero/photo-cards-desktop@2x.jpg" alt=""
-                        width="410" height="459">
-                    </picture>
-                  </div>
-                </div>
-                <div class="hero__slide-image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp"
-                      srcset="img/hero/hero-2-mobile@1x.webp 1x, img/hero/hero-2-mobile@2x.webp 2x">
-                    <source media="(max-width: 1199px)" type="image/webp"
-                      srcset="img/hero/hero-2-tablet@1x.webp 1x, img/hero/hero-2-tablet@2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/hero/hero-1-desktop@1x.webp 1x, img/hero/hero-1-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" type="image/jpg"
-                      srcset="img/hero/hero-2-mobile@1x.jpg 1x, img/hero/hero-2-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/jpg"
-                      srcset="img/hero/hero-2-tablet@1x.jpg 1x, img/hero/hero-2-tablet@2x.jpg 2x">
-                    <img src="img/hero/hero-2-desktop@1x.jpg" srcset="img/hero/hero-2-desktop@2x.jpg" alt=""
-                      width="1440" height="800">
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="hero__swiper-slide swiper-slide" role="group" aria-label="3/3">
-              <div class="hero__slide">
-                <div class="hero__slide-content">
-                  <h2>Магические пейзажи Алтайского Края</h2>
-                  <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух
-                    ландшафтов Алтайских гор.</p>
-                  <a class="hero__btn btn" href="#">Смотреть тур</a>
-                  <div class="hero__level">
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#moon"></use>
-                      </svg>
-                      8 дней/7 ночей
-                    </span>
-                    <span>
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#level"></use>
-                      </svg>
-                      Лёгкая сложность
-                    </span>
-                  </div>
-                  <div class="hero__music">
-                    <iframe style="border:none;width:340px;height:220px;" width="340" height="220"
-                      src="https://music.yandex.ru/iframe/track/112912322/25474374"></iframe>
-                  </div>
-                </div>
-                <div class="hero__slide-image">
-                  <picture>
-                    <source media="(max-width: 767px)" type="image/webp"
-                      srcset="img/hero/hero-2-mobile@1x.webp 1x, img/hero/hero-2-mobile@2x.webp 2x">
-                    <source media="(max-width: 1199px)" type="image/webp"
-                      srcset="img/hero/hero-2-tablet@1x.webp 1x, img/hero/hero-2-tablet@2x.webp 2x">
-                    <source type="image/webp"
-                      srcset="img/hero/hero-1-desktop@1x.webp 1x, img/hero/hero-1-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" type="image/jpg"
-                      srcset="img/hero/hero-2-mobile@1x.jpg 1x, img/hero/hero-2-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1199px)" type="image/jpg"
-                      srcset="img/hero/hero-2-tablet@1x.jpg 1x, img/hero/hero-2-tablet@2x.jpg 2x">
-                    <img src="img/hero/hero-2-desktop@1x.jpg" srcset="img/hero/hero-2-desktop@2x.jpg" alt=""
-                      width="1440" height="800">
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero__swiper-pagination swiper-pagination swiper-pagination-bullets">
-          </div>
-        </div>
-      </section>
+        </section>
+        <section class="training" id="training" data-test="training">
+          <div class="container"></div>
+        </section>
+        <section class="about" id="about" data-test="about">
+          <div class="container"></div>
+        </section>
+        <section class="reviews" id="reviews" data-test="reviews">
+          <div class="container"></div>
+        </section>
+        <section class="advantages" data-test="adv">
+          <div class="container"></div>
+        </section>
+        <section class="gallery" id="gallery" data-test="gallery">
+          <div class="container"></div>
+        </section>
+        <section class="form" data-test="form">
+          <div class="container"></div>
+        </section>
+      </main>
+      <footer data-test="footer">
+        <section class="contacts" id="contacts">
+          <div class="container"></div>
+        </section>
+        <div class="container"></div>
+      </footer>
     </div>
-    <main>
-      <section class="intro">
-        <div class="container">
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container"></div>
-    </footer>
-  </div>
 
-  <script defer src="js/vendor.min.js"></script>
-  <script defer src="js/main.min.js"></script>
-</body>
-
+    <script defer src="js/vendor.min.js"></script>
+    <script defer src="js/main.min.js"></script>
+  </body>
 </html>
