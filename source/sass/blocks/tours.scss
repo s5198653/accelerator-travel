@@ -1,3 +1,29 @@
+.tours {
+  position: relative;
+}
+
+.tours__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.tours__image img {
+  width: 602px;
+  height: 1630px;
+
+  @include vp-1199 {
+    width: 602px;
+    height: 1364px;
+  }
+
+  @include vp-767 {
+    width: 346px;
+    height: 595px;
+  }
+}
+
 .tours__container {
   display: flex;
   flex-direction: column;
@@ -6,7 +32,7 @@
   padding-bottom: 100px;
 
   @include vp-1199 {
-    gap: 25px;
+    gap: 24px;
     padding-top: 45px;
     padding-bottom: 45px;
   }
@@ -21,7 +47,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 53px;
+  gap: 50px;
+  padding-top: 23px;
 
   @include vp-1199 {
     gap: 25px;
@@ -151,7 +178,7 @@
 
 .tours__details-item:first-child::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   height: 1px;
@@ -166,7 +193,7 @@
   height: 35px;
   color: $color-default-white;
   background-color: $color-navy-blue;
-  top: 8px;
+  top: 42px;
   right: 0;
 
   &::after {
@@ -215,6 +242,7 @@
   letter-spacing: 0.64px;
   text-transform: uppercase;
   align-self: center;
+  padding: 10px;
 
   @include hover-focus {
     color: $color-resolution-blue;
