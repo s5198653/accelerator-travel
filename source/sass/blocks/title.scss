@@ -1,21 +1,23 @@
-.title__wrapper {
+.title {
   position: relative;
 }
 
-.title {
+.title h2 {
   position: relative;
   font-size: 35px;
   font-style: normal;
   font-weight: 800;
   line-height: 100%;
+  margin: 0;
 
   @include vp-767 {
     font-size: 22px;
     line-height: 22px;
+    max-width: 230px;
   }
 }
 
-.title__shadow {
+.title p {
   position: absolute;
   top: -15px;
   left: 0;
@@ -25,4 +27,5 @@
   line-height: 55px;
   color: rgba(45, 56, 63, 0.03);
   margin: 0;
+  overflow: hidden;
 }
