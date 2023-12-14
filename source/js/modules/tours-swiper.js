@@ -8,7 +8,7 @@ const initToursSwiper = () =>
       prevEl: '[data-button="tours-prev"]',
     },
     breakpoints: {
-      1240: {
+      1200: {
         slidesPerView: 3,
         spaceBetween: 30,
         allowTouchMove: false,

@@ -186,49 +186,18 @@
   z-index: 1;
 }
 
-.tours__nav-button {
-  width: 37px;
-  height: 35px;
-  color: $color-default-white;
-  background-color: $color-navy-blue;
+.tours__swiper-button {
   top: 42px;
   right: 0;
-
-  &::after {
-    content: none;
-  }
 
   &--prev {
     right: 41px;
     left: auto;
   }
 
-  &--next svg {
-    transform: rotate(180deg);
-  }
-
-  @include hover-focus {
-    color: $color-resolution-blue;
-    background-color: $color-default-white;
-    border: 1px solid;
-  }
-
-  @include active {
-    color: $color-default-white;
-    background-color: $color-resolution-blue;
-    border: 1px solid $color-resolution-blue;
-  }
-
   @include vp-767 {
     top: 30px;
   }
-}
-
-.tours__nav-button.swiper-button-disabled {
-  color: $color-default-white;
-  background-color: $color-nobel;
-  border: 1px solid $color-nobel;
-  opacity: 1;
 }
 
 .tours__all {
