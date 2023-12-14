@@ -6,6 +6,7 @@ import {initLocomotiveScroll} from './modules/burger-menu/init-locomotive-scroll
 import {runVideo} from './modules/run-video';
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initToursSwiper} from './modules/tours-swiper';
+import {initTrainingSwiper} from './modules/training-swiper';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     runVideo();
     initHeroSwiper();
     initToursSwiper();
+    initTrainingSwiper();
   });
 });
 
