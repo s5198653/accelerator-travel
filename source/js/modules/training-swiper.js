@@ -14,6 +14,12 @@ const initTrainingSwiper = () =>
       },
       768: {
         slidesPerView: 3,
+        spaceBetween: 20,
+        allowTouchMove: true,
+      },
+      450: {
+        slidesPerView: 2,
+        spaceBetween: 20,
         allowTouchMove: true,
       },
       320: {
