@@ -7,6 +7,7 @@ import {runVideo} from './modules/run-video';
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initToursSwiper} from './modules/tours-swiper';
 import {initTrainingSwiper} from './modules/training-swiper';
+import {initReviewsSwiper} from './modules/reviews-swiper';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSwiper();
     initToursSwiper();
     initTrainingSwiper();
+    initReviewsSwiper();
   });
 });
 
