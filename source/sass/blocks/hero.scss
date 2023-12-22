@@ -3,6 +3,7 @@
 }
 
 .hero__slide {
+  height: auto;
   background-color: $color-navy-blue;
 }
 
@@ -261,7 +262,7 @@
   bottom: 97px;
   display: flex;
   gap: 12px;
-  justify-content: end;
+  justify-content: flex-end;
   padding-right: 116px;
 
   @include vp-1199 {
