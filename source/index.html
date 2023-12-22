@@ -391,10 +391,9 @@
                     <div class="hero__music">
                       <iframe
                         style="border: none; width: 340px; height: 220px"
+                        loading="lazy"
                         width="340"
                         height="220"
-                        src="https://music.yandex.ru/iframe/track/112912322/25474374"
-                        loading="lazy"
                       ></iframe>
                     </div>
                   </div>
@@ -462,7 +461,7 @@
         <section class="tours" id="tours" data-test="tours">
           <div class="tours__container container">
             <div class="tours__swiper-wrapper">
-              <div class="tours__title title">
+              <div class="tours__title title title--big">
                 <h2>Ближайшие туры</h2>
                 <p>Ближайшие туры</p>
               </div>
@@ -1161,9 +1160,9 @@
                 <p>Обучение</p>
               </div>
               <p>
-                Обучение проводится квалифицированными специалистами, за плечами
-                которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев,
-                Эльбруса, Алтая, Карелии, Адыгеи и других.
+                Обучение проводится квалифицированными специалистами,
+                за&nbsp;плечами которых десятки пройденных маршрутов Кавказа,
+                Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и&nbsp;других.
               </p>
             </div>
             <div class="training__swiper-wrapper">
@@ -1190,154 +1189,6 @@
               >
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div
-                    class="training__swiper-slide swiper-slide"
-                    role="group"
-                    aria-label="1/6"
-                  >
-                    <div class="training__slide-image">
-                      <picture>
-                        <source
-                          type="image/webp"
-                          srcset="
-                            img/training/photo-1@1x.webp 1x,
-                            img/training/photo-1@2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="img/training/photo-1@1x.jpg"
-                          srcset="img/training/photo-1@2x.jpg"
-                          alt=""
-                          width="255"
-                          height="200"
-                        />
-                      </picture>
-                    </div>
-                    <div class="training__slide-content">
-                      <h4>Александр<br />Прокофьев</h4>
-                      <a class="training__link" href="#">
-                        <svg width="24" height="24">
-                          <use href="img/sprite.svg#vk"></use>
-                        </svg>
-                      </a>
-                      <p>
-                        Строгий и внимательный инструктор, весёлый и общительный
-                        человек. Любит природу.
-                      </p>
-                    </div>
-                    <div class="training__slide"></div>
-                  </div>
-                  <div
-                    class="training__swiper-slide swiper-slide"
-                    role="group"
-                    aria-label="2/6"
-                  >
-                    <div class="training__slide-image">
-                      <picture>
-                        <source
-                          type="image/webp"
-                          srcset="
-                            img/training/photo-2@1x.webp 1x,
-                            img/training/photo-2@2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="img/training/photo-2@1x.jpg"
-                          srcset="img/training/photo-2@2x.jpg"
-                          alt=""
-                          width="255"
-                          height="200"
-                        />
-                      </picture>
-                    </div>
-                    <div class="training__slide-content">
-                      <h4>Светлана<br />Афиногенова</h4>
-                      <a class="training__link" href="#">
-                        <svg width="24" height="24">
-                          <use href="img/sprite.svg#vk"></use>
-                        </svg>
-                      </a>
-                      <p>
-                        Видеть мир вокруг, познавать его опасности, находить
-                        друг друга, становиться ближе, чувствовать — в этом
-                        назначение жизни.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="training__swiper-slide swiper-slide"
-                    role="group"
-                    aria-label="3/6"
-                  >
-                    <div class="training__slide-image">
-                      <picture>
-                        <source
-                          type="image/webp"
-                          srcset="
-                            img/training/photo-3@1x.webp 1x,
-                            img/training/photo-3@2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="img/training/photo-3@1x.jpg"
-                          srcset="img/training/photo-3@2x.jpg"
-                          alt=""
-                          width="255"
-                          height="200"
-                        />
-                      </picture>
-                    </div>
-                    <div class="training__slide-content">
-                      <h4>Надежда<br />Колесниченко</h4>
-                      <a class="training__link" href="#">
-                        <svg width="24" height="24">
-                          <use href="img/sprite.svg#vk"></use>
-                        </svg>
-                      </a>
-                      <p>
-                        Участники говорят, что Надежда ответственная, приятная в
-                        общении, и в поездках с ней чувствуешь себя спокойно и
-                        уверенно.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="training__swiper-slide swiper-slide"
-                    role="group"
-                    aria-label="4/6"
-                  >
-                    <div class="training__slide-image">
-                      <picture>
-                        <source
-                          type="image/webp"
-                          srcset="
-                            img/training/photo-4@1x.webp 1x,
-                            img/training/photo-4@2x.webp 2x
-                          "
-                        />
-                        <img
-                          src="img/training/photo-4@1x.jpg"
-                          srcset="img/training/photo-4@2x.jpg"
-                          alt=""
-                          width="255"
-                          height="200"
-                        />
-                      </picture>
-                    </div>
-                    <div class="training__slide-content">
-                      <h4>Федор<br />Кайгородов</h4>
-                      <a class="training__link" href="#">
-                        <svg width="24" height="24">
-                          <use href="img/sprite.svg#vk"></use>
-                        </svg>
-                      </a>
-                      <p>
-                        Опыт походов: Ходит в походы с 2001 года. В России
-                        побывал в горных районах Хибины, Архыз, много
-                        путешествует по Европе.
-                      </p>
-                    </div>
-                  </div>
                   <div
                     class="training__swiper-slide swiper-slide"
                     role="group"
@@ -1405,9 +1256,157 @@
                         </svg>
                       </a>
                       <p>
-                        Видеть мир вокруг, познавать его опасности, находить
-                        друг друга, становиться ближе, чувствовать — в этом
-                        назначение жизни.
+                        Видеть мир вокруг, познавать его&nbsp;опасности,
+                        находить друг друга, становиться ближе, чувствовать —
+                        в&nbsp;этом назначение жизни.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="training__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="1/6"
+                  >
+                    <div class="training__slide-image">
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/training/photo-1@1x.webp 1x,
+                            img/training/photo-1@2x.webp 2x
+                          "
+                        />
+                        <img
+                          src="img/training/photo-1@1x.jpg"
+                          srcset="img/training/photo-1@2x.jpg"
+                          alt=""
+                          width="255"
+                          height="200"
+                        />
+                      </picture>
+                    </div>
+                    <div class="training__slide-content">
+                      <h4>Александр<br />Прокофьев</h4>
+                      <a class="training__link" href="#">
+                        <svg width="24" height="24">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                      <p>
+                        Строгий и внимательный инструктор, весёлый
+                        и&nbsp;общительный человек. Любит природу.
+                      </p>
+                    </div>
+                    <div class="training__slide"></div>
+                  </div>
+                  <div
+                    class="training__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="2/6"
+                  >
+                    <div class="training__slide-image">
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/training/photo-2@1x.webp 1x,
+                            img/training/photo-2@2x.webp 2x
+                          "
+                        />
+                        <img
+                          src="img/training/photo-2@1x.jpg"
+                          srcset="img/training/photo-2@2x.jpg"
+                          alt=""
+                          width="255"
+                          height="200"
+                        />
+                      </picture>
+                    </div>
+                    <div class="training__slide-content">
+                      <h4>Светлана<br />Афиногенова</h4>
+                      <a class="training__link" href="#">
+                        <svg width="24" height="24">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                      <p>
+                        Видеть мир вокруг, познавать его&nbsp;опасности,
+                        находить друг друга, становиться ближе, чувствовать —
+                        в&nbsp;этом назначение жизни.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="training__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="3/6"
+                  >
+                    <div class="training__slide-image">
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/training/photo-3@1x.webp 1x,
+                            img/training/photo-3@2x.webp 2x
+                          "
+                        />
+                        <img
+                          src="img/training/photo-3@1x.jpg"
+                          srcset="img/training/photo-3@2x.jpg"
+                          alt=""
+                          width="255"
+                          height="200"
+                        />
+                      </picture>
+                    </div>
+                    <div class="training__slide-content">
+                      <h4>Надежда<br />Колесниченко</h4>
+                      <a class="training__link" href="#">
+                        <svg width="24" height="24">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                      <p>
+                        Участники говорят, что&nbsp;Надежда ответственная,
+                        приятная в общении, и&nbsp;в&nbsp;поездках
+                        с&nbsp;ней&nbsp;чувствуешь себя спокойно и уверенно.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="training__swiper-slide swiper-slide"
+                    role="group"
+                    aria-label="4/6"
+                  >
+                    <div class="training__slide-image">
+                      <picture>
+                        <source
+                          type="image/webp"
+                          srcset="
+                            img/training/photo-4@1x.webp 1x,
+                            img/training/photo-4@2x.webp 2x
+                          "
+                        />
+                        <img
+                          src="img/training/photo-4@1x.jpg"
+                          srcset="img/training/photo-4@2x.jpg"
+                          alt=""
+                          width="255"
+                          height="200"
+                        />
+                      </picture>
+                    </div>
+                    <div class="training__slide-content">
+                      <h4>Федор<br />Кайгородов</h4>
+                      <a class="training__link" href="#">
+                        <svg width="24" height="24">
+                          <use href="img/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                      <p>
+                        Опыт походов: Ходит в походы с&nbsp;2001&nbsp;года. В
+                        России побывал в горных районах Хибины, Архыз, много
+                        путешествует по Европе.
                       </p>
                     </div>
                   </div>
@@ -1419,25 +1418,25 @@
             <h3 class="training__title">Процесс обучения</h3>
             <ul class="training__list">
               <li class="training__item">
-                <svg width="25" height="25">
+                <svg width="24" height="24">
                   <use href="img/sprite.svg#map"></use>
                 </svg>
                 <p>Изучение спортивного туристского движения</p>
               </li>
               <li class="training__item training__item--boot">
-                <svg width="25" height="25">
+                <svg width="24" height="24">
                   <use href="img/sprite.svg#boots"></use>
                 </svg>
-                <p>Подготовка и техническое снаряжение в походах</p>
+                <p>Подготовка и&nbsp;техническое снаряжение в походах</p>
               </li>
               <li class="training__item training__item--tree">
-                <svg width="25" height="25">
+                <svg width="24" height="24">
                   <use href="img/sprite.svg#pine-tree"></use>
                 </svg>
-                <p>Лекции по окружающей среде, экологии и гигиене</p>
+                <p>Лекции по&nbsp;окружающей среде, экологии и гигиене</p>
               </li>
               <li class="training__item training__item--mountain">
-                <svg width="25" height="25">
+                <svg width="24" height="24">
                   <use href="img/sprite.svg#mountain"></use>
                 </svg>
                 <p>Разъяснение сложности горных препятствий</p>
@@ -1509,9 +1508,10 @@
                   <p>
                     В далёком 2000 году мы начали заниматься туризмом — походы,
                     поездки, восхождения, нам&nbsp;это&nbsp;настолько
-                    понравилось, что&nbsp;мы&nbsp;этим стали жить. Спустя 5 лет,
-                    в&nbsp;2005 году мы основали компанию, чтобы показывать
-                    людям удивительные места нашей страны.
+                    понравилось, что&nbsp;мы&nbsp;этим стали жить.
+                    Спустя&nbsp;5&nbsp;лет, в&nbsp;2005 году мы основали
+                    компанию, чтобы показывать людям удивительные места нашей
+                    страны.
                   </p>
                 </li>
                 <li class="about__item">
@@ -1519,7 +1519,7 @@
                   <p>
                     Подарить вам незабываемые впечатления от похода в горы.
                     Мы&nbsp;берём на&nbsp;себя все&nbsp;организационные вопросы.
-                    При&nbsp;организации мы обязательно учтём все ваши
+                    При&nbsp;организации мы обязательно учтём все&nbsp;ваши
                     пожелания. Вам&nbsp;останется только наслаждаться
                     незабываемым приключением в&nbsp;приятной компании.
                   </p>
@@ -1612,15 +1612,16 @@
                     </div>
                     <blockquote class="reviews__slide-content">
                       <p>
-                        Осенью ходили в поход на Алтай с друзьями. Впечатления
-                        потрясающие! Инструкторы — настоящие эксперты — всему
-                        научили, все показали. Делились увлекательными историями
-                        о местах, людях, культуре места.
+                        Осенью ходили в поход на Алтай с&nbsp;друзьями.
+                        Впечатления потрясающие! Инструкторы — настоящие
+                        эксперты — всему научили, все&nbsp;показали. Делились
+                        увлекательными историями о местах, людях, культуре
+                        места.
                       </p>
                       <p>
                         С уверенностью могу сказать, что жизнь разделилась на до
-                        этого и после. Ещё никогда не отдыхал так душой и телом.
-                        Всем очень рекомендую!
+                        этого и после. Ещё&nbsp;никогда не отдыхал так душой
+                        и&nbsp;телом.&nbsp;Всем очень рекомендую!
                       </p>
                       <cite>Фролов Александр</cite>
                       <p>38 лет, Москва</p>
@@ -1686,7 +1687,8 @@
                         Хороший полноценный поход с разнообразными локациями. В
                         начале дорога идёт по лыжне, далее прошли мимо полигона,
                         по болотам, у озёр и лесных ручьёв, остатков дач конца
-                        19 века. Было очень интересно!
+                        19 века. Было очень<br />
+                        интересно!
                       </p>
                       <p>
                         Инструктор Федор дружелюбный, внимательный к технике
@@ -1913,7 +1915,7 @@
               />
             </picture>
           </div>
-          <div class="advantages__title title">
+          <div class="advantages__title title title--big">
             <h2>Преимущества</h2>
             <p>Преимущества</p>
           </div>
@@ -1936,9 +1938,9 @@
                 <h3>Безопасность</h3>
                 <p>
                   Уделяем внимание безопасности клиентов, внедряя строгие
-                  процедуры и протоколы безопасности. Имеем планы действий на
-                  случай непредвиденных обстоятельств и даём гарантию полной
-                  безопасности во время всего тура.
+                  процедуры и протоколы безопасности. Имеем планы действий
+                  на&nbsp;случай непредвиденных обстоятельств и&nbsp;даём
+                  гарантию полной безопасности во&nbsp;время всего тура.
                 </p>
               </li>
               <li
@@ -1954,9 +1956,9 @@
                 <h3>Экспертиза и знания</h3>
                 <p>
                   Наша команда опытных гидов имеет обширные знания о местности,
-                  погодных условиях и технике безопасности. Это гарантирует, что
-                  наши клиенты находятся в надежных руках и могут в полной мере
-                  насладиться опытом без опасений.
+                  погодных условиях и технике безопасности. Это гарантирует,
+                  что&nbsp;наши клиенты находятся в&nbsp;надежных руках и могут
+                  в полной мере насладиться опытом без&nbsp;опасений.
                 </p>
               </li>
               <li
@@ -1971,10 +1973,11 @@
                 </span>
                 <h3>Оборудование и снаряжение</h3>
                 <p>
-                  Мы предоставляем клиентам все необходимое оборудование,
-                  необходимое для путешествия. Это избавляет клиентов от
-                  необходимости покупать, брать с собой снаряжение, что делает
-                  путешествие более удобным и экономически выгодным.
+                  Мы предоставляем клиентам все&nbsp;необходимое оборудование,
+                  необходимое для путешествия. Это&nbsp;избавляет клиентов
+                  от&nbsp;необходимости покупать, брать с&nbsp;собой снаряжение,
+                  что&nbsp;делает путешествие более удобным и&nbsp;экономически
+                  выгодным.
                 </p>
               </li>
               <li
@@ -1990,9 +1993,10 @@
                 <h3>Индивидуальные маршруты</h3>
                 <p>
                   Предлагаем широкий выбор туров, отвечающих различным уровням
-                  мастерства и интересам. Мы также можем адаптировать маршруты к
-                  вашим конкретным потребностям и предпочтениям, чтобы вы
-                  получили индивидуальный опыт.
+                  мастерства и&nbsp;интересам. Мы&nbsp;также&nbsp;можем
+                  адаптировать маршруты к вашим конкретным потребностям и
+                  предпочтениям, чтобы&nbsp;вы&nbsp;получили индивидуальный
+                  опыт.
                 </p>
               </li>
               <li
@@ -2005,7 +2009,7 @@
                     <use href="img/sprite.svg#leaf"></use>
                   </svg>
                 </span>
-                <h3>Бережное отношение к природе</h3>
+                <h3>Бережное отношение к&nbsp;природе</h3>
                 <p>
                   Уделяем первостепенное внимание охране окружающей среды и
                   гарантируем, что туры оказывают минимальное воздействие на

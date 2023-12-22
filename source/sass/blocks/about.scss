@@ -6,6 +6,14 @@
   position: absolute;
   top: 56px;
   left: 0;
+
+  @include vp-1199 {
+    top: 60px;
+  }
+
+  @include vp-767 {
+    top: 0;
+  }
 }
 
 .about__image img {
@@ -35,32 +43,53 @@
 
   @include vp-1199 {
     padding-top: 15px;
-    padding-bottom: 0;
+    padding-bottom: 2px;
     gap: 36px;
+    padding-right: 43px;
   }
 
   @include vp-767 {
     padding-top: 400px;
+    padding-bottom: 1px;
     gap: 25px;
     align-items: baseline;
+    padding-right: 15px;
   }
 }
 
 .about__content {
   display: flex;
   flex-direction: column;
-  gap: 57px;
+  gap: 56px;
   width: 50%;
+  min-height: 395px;
   z-index: 1;
+  padding-left: 15px;
 
   @include vp-1199 {
-    gap: 36px;
+    gap: 34px;
     width: 40%;
+    padding-left: 0;
   }
 
   @include vp-767 {
     gap: 25px;
     width: 100%;
+    padding-left: 0;
+  }
+}
+
+.about__title {
+  padding-top: 23px;
+
+  @include vp-1199 {
+    padding-top: 3px;
+    padding-left: 6px;
+  }
+
+  @include vp-767 {
+    padding-top: 6px;
+    padding-left: 0;
   }
 }
 
@@ -70,13 +99,29 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
+
+  @include vp-1199 {
+    gap: 28px;
+  }
+
+  @include vp-767 {
+    gap: 26px;
+  }
 }
 
 .about__item {
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @include vp-1199 {
+    gap: 12px;
+  }
+
+  @include vp-767 {
+    gap: 14px;
+  }
 }
 
 .about__item h3 {
