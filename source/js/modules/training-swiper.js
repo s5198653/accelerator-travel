@@ -3,6 +3,7 @@ const initTrainingSwiper = () =>
     direction: 'horizontal',
     slidesPerView: 4,
     spaceBetween: 20,
+    initialSlide: 3,
     navigation: {
       nextEl: '[data-button="training-next"]',
       prevEl: '[data-button="training-prev"]',
@@ -10,11 +11,13 @@ const initTrainingSwiper = () =>
     breakpoints: {
       1200: {
         slidesPerView: 4,
+
         allowTouchMove: false,
       },
       768: {
         slidesPerView: 3,
         spaceBetween: 20,
+        initialSlide: 2,
         allowTouchMove: true,
       },
       450: {
@@ -25,7 +28,7 @@ const initTrainingSwiper = () =>
       320: {
         slidesPerView: 1,
         spaceBetween: 0,
-        initialSlide: 2,
+        initialSlide: 4,
         allowTouchMove: true,
       },
     },
