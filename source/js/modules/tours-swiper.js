@@ -3,6 +3,7 @@ const initToursSwiper = () =>
     direction: 'horizontal',
     slidesPerView: 3,
     spaceBetween: 30,
+    initialSlide: 3,
     navigation: {
       nextEl: '[data-button="tours-next"]',
       prevEl: '[data-button="tours-prev"]',
