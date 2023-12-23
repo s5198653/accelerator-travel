@@ -2046,8 +2046,8 @@
                 <p>Фотогалерея</p>
               </div>
               <p>
-                Добавляйте фото в Instagram с хэштегом #лайфтур, а также
-                отмечайте нас на фото. Лучшие фотографии украсят этот раздел
+                Добавляйте фото в Instagram с хэштегом #лайфтур, а также
+                отмечайте нас на фото. Лучшие фотографии украсят этот раздел
                 нашего сайта.
               </p>
               <div
@@ -2446,8 +2446,112 @@
           </div>
         </section>
 
-        <section class="form" data-test="form">
-          <div class="container"></div>
+        <section class="feedback" data-test="form">
+          <div class="feedback__image">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                type="image/webp"
+                srcset="
+                  img/feedback/feedback-mobile@1x.webp 1x,
+                  img/feedback/feedback-mobile@2x.webp 2x
+                "
+              />
+              <source
+                media="(max-width: 1199px)"
+                type="image/webp"
+                srcset="
+                  img/feedback/feedback-tablet@1x.webp 1x,
+                  img/feedback/feedback-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/feedback/feedback-desktop@1x.webp 1x,
+                  img/feedback/feedback-desktop@2x.webp 2x
+                "
+              />
+              <source
+                media="(max-width: 767px)"
+                type="image/jpg"
+                srcset="
+                  img/feedback/feedback-mobile@1x.jpg 1x,
+                  img/feedback/feedback-mobile@2x.jpg 2x
+                "
+              />
+              <source
+                media="(max-width: 1199px)"
+                type="image/jpg"
+                srcset="
+                  img/feedback/feedback-tablet@1x.jpg 1x,
+                  img/feedback/feedback-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                src="img/feedback/feedback-desktop@1x.jpg"
+                srcset="img/feedback/feedback-desktop@2x.jpg"
+                alt=""
+                width="1440"
+                height="760"
+              />
+            </picture>
+          </div>
+          <div class="feedback__content">
+            <h2>Остались вопросы?</h2>
+            <p>
+              Заполните форму и наш оператор свяжется с&nbsp;вами для
+              консультации.
+            </p>
+            <div data-form-validate data-callback="base" data-form="send">
+              <form
+                class="feedback__form"
+                action="https://echo.htmlacademy.ru/"
+                method="post"
+              >
+                <div
+                  class="form__input"
+                  data-validate-type="phone"
+                  data-on-input-validate
+                  data-message-base="Поле обязательно к заполнению"
+                  data-message-extra="Проверьте корректность заполнения поля"
+                  data-message-success="Поле заполнено верно"
+                  data-required
+                >
+                  <label>
+                    <span class="visually-hidden">Телефон</span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Телефон"
+                      required
+                    />
+                  </label>
+                </div>
+                <div
+                  class="form__input"
+                  data-validate-type="email"
+                  data-limitation="name"
+                  data-message-base="Поле обязательно к заполнению"
+                  data-message-extra="Проверьте корректность заполнения поля"
+                  data-required
+                >
+                  <label>
+                    <span class="visually-hidden">Имя</span>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </label>
+                </div>
+                <button class="feedback__button btn" type="submit">
+                  Отправить
+                </button>
+              </form>
+            </div>
+          </div>
         </section>
       </main>
       <footer data-test="footer">
