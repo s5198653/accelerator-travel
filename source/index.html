@@ -108,9 +108,9 @@
                   </li>
                 </ul>
               </nav>
-              <a class="header__phone" href="tel:+78007253232"
-                >8 800 725-32-32</a
-              >
+              <a class="header__phone" href="tel:+78007253232">
+                8 800 725-32-32
+              </a>
             </div>
           </div>
         </header>
@@ -1215,7 +1215,7 @@
                     <div class="training__slide-content">
                       <h4>Александр<br />Прокофьев</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -1251,7 +1251,7 @@
                     <div class="training__slide-content">
                       <h4>Светлана<br />Афиногенова</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -1288,7 +1288,7 @@
                     <div class="training__slide-content">
                       <h4>Александр<br />Прокофьев</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -1325,7 +1325,7 @@
                     <div class="training__slide-content">
                       <h4>Светлана<br />Афиногенова</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -1362,7 +1362,7 @@
                     <div class="training__slide-content">
                       <h4>Надежда<br />Колесниченко</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -1399,7 +1399,7 @@
                     <div class="training__slide-content">
                       <h4>Федор<br />Кайгородов</h4>
                       <a class="training__link" href="#">
-                        <svg width="24" height="24">
+                        <svg width="14" height="8">
                           <use href="img/sprite.svg#vk"></use>
                         </svg>
                       </a>
@@ -2554,11 +2554,158 @@
           </div>
         </section>
       </main>
-      <footer data-test="footer">
+      <footer class="footer" data-test="footer">
         <section class="contacts" id="contacts">
-          <div class="container"></div>
+          <div class="contacts__container container">
+            <div class="contacts__text">
+              <div class="contacts__title title">
+                <h2>Контакты</h2>
+                <p>Контакты</p>
+              </div>
+              <p>
+                Свяжитесь с нами любым удобным для&nbsp;вас способом или
+                приходите к&nbsp;нам&nbsp;в&nbsp;гости. Мы будем рады поделиться
+                увлекательными историями и подобрать для вас тур.
+              </p>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <svg width="26" height="26">
+                    <use href="img/sprite.svg#phone"></use>
+                  </svg>
+                  <div class="contacts__item-content">
+                    <h3>Телефон:</h3>
+                    <a href="tel:+79837454545">+7 983 745-45-45</a>
+                  </div>
+                </li>
+                <li class="contacts__item">
+                  <svg width="26" height="26">
+                    <use href="img/sprite.svg#mail"></use>
+                  </svg>
+                  <div class="contacts__item-content">
+                    <h3>Email:</h3>
+                    <a href="mailto:info@lifetour.com">info@lifetour.com</a>
+                  </div>
+                </li>
+                <li class="contacts__item">
+                  <svg width="26" height="26">
+                    <use href="img/sprite.svg#pin"></use>
+                  </svg>
+                  <div class="contacts__item-content">
+                    <h3>Адрес:</h3>
+                    <p>г. Москва, пр-т Мира, д. 14, офис 101</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__image">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                  srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/map-desktop@1x.webp 1x,
+                    img/map-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                  srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                  srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x"
+                />
+                <img
+                  src="img/map-desktop@1x.jpg"
+                  srcset="img/map-desktop@2x.jpg"
+                  alt=""
+                  width="585"
+                  height="324"
+                />
+              </picture>
+            </div>
+          </div>
         </section>
-        <div class="container"></div>
+        <div class="footer__container container">
+          <div class="footer__nav-wrapper">
+            <a class="footer__logo logo" href="#">
+              <svg width="142" height="42">
+                <use href="img/sprite.svg#logotype"></use>
+              </svg>
+            </a>
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#tours">Туры</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#training">Обучение</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#about">О нас</a>
+                </li>
+              </ul>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#reviews">Отзывы</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#gallery">Фотографии</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="footer__phone" href="tel:+78007253232">
+              8 800 725-32-32
+            </a>
+          </div>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link footer__social-link--vkontakte"
+                href="#"
+              >
+                <span class="visually-hidden">Мы в Вконтакте</span>
+                <svg width="16" height="16">
+                  <use href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link footer__social-link--ok" href="#">
+                <span class="visually-hidden">Мы в Одноклассниках</span>
+                <svg width="16" height="16">
+                  <use href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link footer__social-link--reddit"
+                href="#"
+              >
+                <span class="visually-hidden">Мы в Reddit</span>
+                <svg width="16" height="16">
+                  <use href="img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="footer__privacy" href="#"> Политика конфиденциальности </a>
+        </div>
       </footer>
     </div>
 
