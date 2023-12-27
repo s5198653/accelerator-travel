@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 46px;
+  gap: 50px;
+  max-width: $vp-1440;
+  margin: 0 auto;
   padding: 42px 0 81px;
 
   @include vp-1199 {
@@ -45,8 +47,9 @@
     display: none;
   }
 }
+
 .advantages__title {
-  padding-top: 18px;
+  padding: 18px 120px 0;
 
   @include vp-1199 {
     padding-top: 23px;
@@ -101,7 +104,7 @@
 }
 
 .advantages__slide {
-  width: 380px;
+  min-width: 380px;
   min-height: 329px;
   height: auto;
   display: flex;
@@ -115,9 +118,9 @@
   margin: 0 auto;
 
   @include vp-1199 {
+    min-width: 324px;
     width: unset;
     height: 100%;
-    min-height: 274px;
     min-height: 340px;
     padding: 29px 19px;
 
@@ -130,6 +133,7 @@
   }
 
   @include vp-767 {
+    min-width: 290px;
     padding: 19px 10px;
     min-height: 239px;
 
@@ -208,10 +212,10 @@
 .advantages__swiper-button {
   top: unset;
   bottom: 0;
-  left: 50%;
+  left: calc(50% + 2px);
 
   &--prev {
-    right: 50%;
+    right: calc(50% + 2px);
     left: unset;
   }
 

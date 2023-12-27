@@ -1,8 +1,13 @@
 const initGallerySwiper = () =>
   new window.Swiper('[data-swiper="gallery-swiper"]', {
-    loop: true,
-    direction: 'horizontal',
     slidesPerView: 'auto',
+    slidesPerGroup: 2,
+    slidesPerGroupSkip: 1,
+    centeredSlides: false,
+    loopAddBlankSlides: true,
+    loop: true,
+    speed: 700,
+    grabCursor: true,
     navigation: {
       nextEl: '[data-button="gallery-next"]',
       prevEl: '[data-button="gallery-prev"]',

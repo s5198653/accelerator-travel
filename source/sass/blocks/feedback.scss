@@ -1,7 +1,7 @@
 .feedback {
   position: relative;
   min-height: 760px;
-  background-color: $color-navy-blue;
+  background-color: $color-resolution-blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,11 +107,12 @@
   }
 }
 
-.form__input input {
+.feedback__input input {
   display: flex;
   padding: 20px 30px;
   width: 100%;
   border-radius: 2px;
+  background-color: $color-default-white;
   border: 1px solid rgba(2, 102, 193, 0.1);
 
   &::placeholder {
@@ -121,11 +122,59 @@
     opacity: 0.5;
   }
 
+  @include hover {
+    border-radius: unset;
+    border-color: $color-navy-blue;
+
+    &::placeholder {
+      color: $color-navy-blue;
+      opacity: 1;
+    }
+  }
+
+  @include focus {
+    border-color: $color-resolution-blue;
+    outline: none;
+
+    &::placeholder {
+      color: $color-transparent;
+    }
+  }
+
+  @include active {
+    border-color: $color-resolution-blue;
+    outline: none;
+
+    &::placeholder {
+      color: $color-transparent;
+    }
+  }
+
+  &:disabled {
+    border-color: rgba(2, 102, 193, 0.1);
+    pointer-events: none;
+
+    &::placeholder {
+      color: $color-navy-blue;
+      opacity: 0.5;
+    }
+  }
+
   @include vp-1199 {
     padding: 16px 15px;
   }
 }
 
+.is-invalid input {
+  border-color: #ff121f;
+}
+
+.input-message.is-invalid {
+  color: #ff121f;
+  border: none;
+}
+
 .feedback__button {
   justify-content: center;
+  margin-bottom: auto;
 }

@@ -1,5 +1,6 @@
 .title {
   position: relative;
+  overflow: hidden;
 }
 
 .title h2 {
@@ -44,7 +45,6 @@
   line-height: 55px;
   color: rgba(45, 56, 63, 0.03);
   margin: 0;
-  overflow: hidden;
 
   @include vp-1199 {
     font-size: 40px;

@@ -176,9 +176,16 @@
 }
 
 .contacts__image img {
+  width: 585px;
+  height: 324px;
+
   @include vp-1199 {
     width: 100%;
-    height: 100%;
+    height: 340px;
     object-fit: cover;
+  }
+
+  @include vp-767 {
+    height: 320px;
   }
 }

@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.hero__swiper-wrapper {
+  align-items: stretch;
+}
+
+.hero__swiper-slide {
+  height: auto;
+}
+
 .hero__slide {
   height: auto;
   background-color: $color-navy-blue;
@@ -16,12 +24,14 @@
   padding: 200px 120px 80px;
   display: flex;
   flex-direction: column;
+  gap: 25px;
 
   @include vp-1199 {
     align-items: center;
     min-height: 1024px;
     text-align: center;
     padding: 212px 45px 87px;
+    gap: 15px;
   }
 
   @include vp-767 {
@@ -38,13 +48,11 @@
   line-height: 77px;
   color: $color-default-white;
   margin: 0;
-  padding-bottom: 23px;
   z-index: 1;
 
   @include vp-1199 {
     font-size: 56px;
     line-height: 56px;
-    padding-bottom: 15px;
   }
 
   @include vp-767 {
@@ -62,29 +70,24 @@
   line-height: 24px;
   color: $color-default-white;
   margin: 0;
-  padding-bottom: 37px;
+  padding-bottom: 12px;
 
   @include vp-1199 {
     max-width: 500px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
   }
 
   @include vp-767 {
     max-width: 290px;
     font-size: 15px;
     line-height: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 45px;
   }
 }
 
 .hero__btn {
   width: 180px;
   justify-content: center;
-  margin-bottom: 20px;
-
-  @include vp-1199 {
-    margin-bottom: 45px;
-  }
 }
 
 .hero__level {
@@ -136,6 +139,7 @@
     position: relative;
     top: unset;
     right: unset;
+    margin-top: 30px;
   }
 
   @include vp-767 {
@@ -224,6 +228,7 @@
     position: relative;
     top: unset;
     right: unset;
+    margin-top: 45px;
   }
 
   @include vp-767 {
@@ -243,6 +248,7 @@
     position: relative;
     top: unset;
     right: unset;
+    margin-top: 45px;
   }
 
   @include vp-767 {
@@ -253,13 +259,15 @@
 .hero__music iframe {
   width: 340px;
   height: 220px;
-  background-color: $color-transparent;
+  border-radius: 12px;
 }
 
 .hero__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   max-width: $vp-1440;
   margin: 0 auto;
   bottom: 97px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 12px;
   justify-content: flex-end;
@@ -292,8 +300,8 @@
   @include active {
     background-color: rgba(255, 255, 255, 0.5);
   }
+}
 
-  &-active {
-    background-color: $color-default-white;
-  }
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white;
 }

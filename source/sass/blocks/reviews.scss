@@ -59,9 +59,6 @@
   width: 100%;
   max-width: $vp-1440;
   margin: 0 auto;
-}
-
-.reviews__swiper {
   padding: 10px;
 
   @include vp-1199 {
@@ -69,11 +66,16 @@
   }
 }
 
+.reviews__slide-wrapper {
+  align-items: stretch;
+}
+
 .reviews__swiper-slide {
   display: grid;
   grid-template-columns: 258px 1fr;
   max-width: 700px;
   min-height: 293px;
+  height: auto;
   gap: 30px;
   padding: 20px 40px 20px 20px;
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);

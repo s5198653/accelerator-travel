@@ -1,6 +1,5 @@
 const initHeroSwiper = () =>
   new window.Swiper('[data-swiper="hero-swiper"]', {
-    autoHeight: true,
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,

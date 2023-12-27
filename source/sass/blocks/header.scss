@@ -52,11 +52,16 @@
     justify-content: flex-start;
     width: 142px;
     padding-left: 0;
+    margin-left: 100px;
 
     .is-open & {
       color: $color-elephant;
       z-index: 25;
     }
+  }
+
+  @include vp-767 {
+    margin-left: 0;
   }
 }
 
@@ -117,7 +122,7 @@
   max-width: 670px;
   padding: 23px 30px;
 
-  @media (max-width: 1199px) {
+  @include vp-1199 {
     max-width: unset;
     background-color: $color-default-white;
     display: flex;
@@ -169,14 +174,14 @@
   margin: 0;
   padding: 0;
 
-  @media (max-width: 1199px) {
+  @include vp-1199 {
     flex-direction: column;
-    margin: 0 0 70px 0;
-    max-width: unset;
+    margin: 0 0 70px;
+    max-width: 200px;
     gap: 26px;
   }
 
-  @media (max-width: 767px) {
+  @include vp-767 {
     gap: 22px;
     align-items: flex-start;
     margin: 0;
@@ -187,7 +192,7 @@
   font-size: 16px;
   line-height: 16px;
 
-  @media (max-width: 1199px) {
+  @include vp-1199 {
     opacity: 0;
     transition: opacity ease-out 0.15s, transform ease-out 0.15s;
     transform: translateX(-15px);
@@ -228,7 +233,7 @@
   position: relative;
   z-index: 25;
 
-  @media (max-width: 1199px) {
+  @include vp-1199 {
     display: flex;
     position: relative;
     transition: opacity 0.3s ease;
@@ -251,7 +256,6 @@
 
 .header__burger-icon {
   font-size: 18px;
-  font-family: 'Neue Machina', 'Arial', sans-serif;
   font-weight: 700;
   line-height: 1;
   transition: opacity 0.3s ease 0.1s;

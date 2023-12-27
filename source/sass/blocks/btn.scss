@@ -14,12 +14,6 @@
 
   transition: opacity $trans-default;
 
-  &--transparent {
-    background-color: $color-transparent;
-    padding: 14px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-  }
-
   &:disabled,
   &--disabled {
     background-color: $color-nobel;
@@ -30,13 +24,11 @@
     color: $color-resolution-blue;
     background-color: $color-default-white;
     border: 1px solid $color-resolution-blue;
-    margin: -1px;
   }
 
   @include active {
     color: $color-default-white;
     background-color: $color-resolution-blue;
     border: unset;
-    margin: 0;
   }
 }

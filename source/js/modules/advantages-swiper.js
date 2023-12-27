@@ -1,4 +1,4 @@
-let desktop = window.matchMedia('(min-width: 1200px)');
+const desktop = window.matchMedia('(min-width: 1200px)');
 let swiper;
 
 const createSwiper = () => {
