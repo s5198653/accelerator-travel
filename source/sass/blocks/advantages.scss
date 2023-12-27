@@ -61,12 +61,12 @@
 }
 
 .advantages__title p {
-  left: -85px;
+  left: 6%;
 
   @include vp-767 {
     font-size: 26px;
     line-height: 26px;
-    left: -10%;
+    left: 24%;
     top: 4px;
   }
 }
