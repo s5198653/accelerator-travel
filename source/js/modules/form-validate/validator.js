@@ -1,4 +1,8 @@
-import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from './regular-expression';
+import {
+  getLimitationsRegEx,
+  getMatrixLimitationsRegEx,
+  getMailRegEx,
+} from './regular-expression';
 import {matrixReplace} from './matrix';
 import {Message} from './render-message';
 
@@ -18,17 +22,37 @@ export class Validator {
     if (!trigger) {
       parent.classList.add('is-invalid');
       if (parent.hasAttribute('data-message-base') && !input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageBase, 'invalid');
+        this._message.renderMessage(
+          parent,
+          parent.dataset.messageBase,
+          'invalid'
+        );
       } else if (parent.hasAttribute('data-message-extra') && input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageExtra, 'invalid');
-      } else if (!parent.hasAttribute('data-message-extra') && parent.hasAttribute('data-message-base') && input.value) {
-        this._message.renderMessage(parent, parent.dataset.messageBase, 'invalid');
+        this._message.renderMessage(
+          parent,
+          parent.dataset.messageExtra,
+          'invalid'
+        );
+      } else if (
+        !parent.hasAttribute('data-message-extra') &&
+        parent.hasAttribute('data-message-base') &&
+        input.value
+      ) {
+        this._message.renderMessage(
+          parent,
+          parent.dataset.messageBase,
+          'invalid'
+        );
       } else {
         this._message.removeMessage(parent);
       }
     } else {
       if (parent.hasAttribute('data-message-success')) {
-        this._message.renderMessage(parent, parent.dataset.messageSuccess, 'valid');
+        this._message.renderMessage(
+          parent,
+          parent.dataset.messageSuccess,
+          'valid'
+        );
       } else {
         this._message.removeMessage(parent);
       }
@@ -74,7 +98,10 @@ export class Validator {
 
   _validateMatrixInput(parent, input) {
     let flag = true;
-    if (input.value.length === input.closest('[data-matrix]').dataset.matrix.length) {
+    if (
+      input.value.length ===
+      input.closest('[data-matrix]').dataset.matrix.length
+    ) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
@@ -194,11 +221,15 @@ export class Validator {
       this._setItemInvalidState(parent, input);
       flag = false;
     } else if (input.value.length < input.minLength) {
-      parent.dataset.messageBase = `Осталось ввести ещё ${input.minLength - input.value.length} символов`;
+      parent.dataset.messageBase = `Осталось ввести ещё ${
+        input.minLength - input.value.length
+      } символов`;
       this._setItemInvalidState(parent, input);
       flag = false;
     } else if (input.value.length > input.minLength) {
-      parent.dataset.messageBase = `Вы ввели ${input.value.length - input.minLength} лишних символов`;
+      parent.dataset.messageBase = `Вы ввели ${
+        input.value.length - input.minLength
+      } лишних символов`;
       this._setItemInvalidState(parent, input);
       flag = false;
     } else {
@@ -211,7 +242,10 @@ export class Validator {
 
   _validateFile(parent, input) {
     let flag = true;
-    const sizeTest = parent.dataset.maxSize && input.files[0] ? input.files[0].size < +parent.dataset.maxSize : true;
+    const sizeTest =
+      parent.dataset.maxSize && input.files[0]
+        ? input.files[0].size < +parent.dataset.maxSize
+        : true;
     if (input.value && sizeTest) {
       this._setItemValidState(parent, input);
     } else {
@@ -253,7 +287,10 @@ export class Validator {
     }
 
     if (!parent.hasAttribute('data-required')) {
-      const removeElement = parent.querySelector('input') || parent.querySelector('select') || parent.querySelector('textarea');
+      const removeElement =
+        parent.querySelector('input') ||
+        parent.querySelector('select') ||
+        parent.querySelector('textarea');
 
       if (!removeElement.value) {
         parent.classList.remove('is-valid');
@@ -268,10 +305,18 @@ export class Validator {
     }
 
     if (parent.dataset.validateType === 'matrix') {
-      this._matrixLimitation(formElement, parent.dataset.matrix, this._getMatrixLimitationsRegEx(parent.dataset.matrixLimitation));
+      this._matrixLimitation(
+        formElement,
+        parent.dataset.matrix,
+        this._getMatrixLimitationsRegEx(parent.dataset.matrixLimitation)
+      );
     }
 
-    const isValid = this._validateInput(parent.dataset.validateType, parent, formElement);
+    const isValid = this._validateInput(
+      parent.dataset.validateType,
+      parent,
+      formElement
+    );
 
     if (onInputValidate || fullValidate) {
       this._renderMessage(isValid, parent, formElement);
@@ -281,7 +326,10 @@ export class Validator {
   _fullValidate(items) {
     let result = true;
     items.forEach((item) => {
-      const formElement = item.querySelector('input') || item.querySelector('select') || item.querySelector('textarea');
+      const formElement =
+        item.querySelector('input') ||
+        item.querySelector('select') ||
+        item.querySelector('textarea');
       this.validateFormElement(formElement, true);
       if (item.classList.contains('is-invalid')) {
         result = false;
