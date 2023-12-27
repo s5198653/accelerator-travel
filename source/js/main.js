@@ -1,8 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
-import './modules/burger-menu/locomotive-scroll';
-import {Burger} from './modules/burger-menu/burger';
-import {initLocomotiveScroll} from './modules/burger-menu/init-locomotive-scroll';
+import {Burger} from './modules/burger';
 import {runVideo} from './modules/run-video';
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initToursSwiper} from './modules/tours-swiper';
@@ -14,7 +12,6 @@ import {initGallerySwiper} from './modules/gallery';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  initLocomotiveScroll();
   iosVhFix();
 
   window.addEventListener('load', () => {
