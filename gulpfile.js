@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import ghPages from 'gulp-gh-pages';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {compileStyles, compileMinStyles} from './gulp/compileStyles.mjs';
